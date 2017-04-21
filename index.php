@@ -53,12 +53,12 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Inicio</a></li>
+                    <li class="active"><a href="index.php">Inicio</a></li>
                     <li><a href="#">Acerca de</a></li>
                     <li><a href="#">Contacto</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="vista/registro.php"><span class="glyphicon glyphicon-log-in"></span> Iniciar sesion</a></li>
+                    <li><a href="vista/login.php"><span class="glyphicon glyphicon-log-in"></span> Iniciar sesion</a></li>
                 </ul>
             </div>
         </div>
