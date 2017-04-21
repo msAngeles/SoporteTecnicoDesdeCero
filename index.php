@@ -40,7 +40,7 @@
 </head>
 
 <body>
-<!--Inicia Menu-->
+    <!--Inicia Menu-->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -49,7 +49,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-                <a class="navbar-brand" href="#">Logo</a>
+                <a class="navbar-brand" href="#">Soporte Tecnico</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
@@ -58,12 +58,12 @@
                     <li><a href="#">Contacto</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="vista/registro.php"><span class="glyphicon glyphicon-log-in"></span> Iniciar sesion</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-<!--Termina Menu-->
+    <!--Termina Menu-->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -76,14 +76,14 @@
             <div class="item active">
                 <img src="img/img1.jpg" alt="Image">
                 <div class="carousel-caption">
-                    
+
                 </div>
             </div>
 
             <div class="item">
                 <img src="img/img4.jpg" alt="Image">
-                <div class="carousel-caption">                   
-                    
+                <div class="carousel-caption">
+
                 </div>
             </div>
         </div>
@@ -98,7 +98,7 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-  <!--
+    <!--
     <div class="container text-center">
         <h3>What We Do</h3><br>
         <div class="row">
