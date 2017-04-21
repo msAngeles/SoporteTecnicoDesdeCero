@@ -8,35 +8,7 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <style>
-        /* Remove the navbar's default margin-bottom and rounded borders */
-        
-        .navbar {
-            margin-bottom: 0;
-            border-radius: 0;
-        }
-        /* Add a gray background color and some padding to the footer */
-        
-        footer {
-            background-color: #f2f2f2;
-            padding: 25px;
-        }
-        
-        .carousel-inner img {
-            width: 100%;
-            /* Set width to 100% */
-            margin: auto;
-            min-height: 100px;
-        }
-        /* Hide the carousel text when the screen is less than 600 pixels wide */
-        
-        @media (max-width: 600px) {
-            .carousel-caption {
-                display: none;
-            }
-        }
 
-    </style>
 </head>
 
 <body>
@@ -64,8 +36,41 @@
         </div>
     </nav>
     <!--Termina Menu-->
-    
 
+
+
+<!--Inicia formulario Registro-->
+    <div class="container">
+        <div class="form-group centered-form">
+            <div class="col-xs-12 col-sm-8 col-md-offset-4 col-sm-offset-2 col-md-offset-2">
+                <h3>Bienvenido</h3>
+                <form role="form" action="" method="post">
+                    <div class="form-group">
+                        <input type="text" name="Usuario" class="form-control input-sm" placeholder="Usuario">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" class="form-control input-sm" placeholder="micorreo@ejemplo.com">
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="password" name="contraseña" class="form-control input-sm" placeholder="contraseña">
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="password" name="repassword" class="form-control input-sm" placeholder="Confirmar contraseña">
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" value="Registrar" class="btn btn-info btn-block">
+                </form>
+            </div>
+        </div>
+    </div>
+<!--Termina formulario Registro-->
+    
+    
 </body>
 
 </html>
