@@ -45,22 +45,22 @@
         <div class="form-group centered-form">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-offset-2">
                 <h3>¡Bienvenid@! Registra tus datos</h3>
-                <form role="form" action="" method="post">
+                <form action="../operacion/registrarUsuario.php" method="post">
                     <div class="form-group">
-                        <input type="text" name="Usuario" class="form-control input-lg" placeholder="Usuario" required autofocus maxlength="15" pattern="[a-zA-Z a-zA-Z]*" title="solo puedes introducir letras">
+                        <input type="text" name="usuario" class="form-control input-lg" placeholder="Usuario" required autofocus maxlength="15" pattern="[a-zA-Z a-zA-Z]*" title="solo puedes introducir letras">
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" id="email" class="form-control input-lg" placeholder="micorreo@ejemplo.com" required autofocus maxlength="50">
+                        <input type="email" name="correo" class="form-control input-lg" placeholder="micorreo@ejemplo.com" required autofocus maxlength="50">
                     </div>
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="password" name="contraseña" class="form-control input-lg" placeholder="contraseña" required autofocus maxlength="16">
+                                <input type="password" name="contra" class="form-control input-lg" placeholder="contraseña" required autofocus maxlength="16">
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="password" name="repassword" class="form-control input-lg" placeholder="Confirmar contraseña" required autofocus maxlength="16">
+                                <input type="password" name="recontra" class="form-control input-lg" placeholder="Confirmar contraseña" required autofocus maxlength="16">
                             </div>
                         </div>
                     </div>

@@ -1,3 +1,12 @@
+<?php
+    SESSION_START();
+    include '../operacion/conexion.php';
+    if(ISSET($_SESSION['usuario'])) {
+        echo '<script> window.location="../index.php"; </script>';
+    }
+?>
+
+
 <!DOCTYPE html>
 
 <html lang="es">
@@ -45,35 +54,30 @@
         <div class="form-group centered-form">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-offset-2">
                 <h3>Inicia sesion</h3>
-                <form role="form" action="" method="post">
+                <form role="form" action="../operacion/validar.php" method="post">
                     <div class="form-group">
-                        <input type="text" name="Usuario" class="form-control input-lg" placeholder="Usuario" required autofocus maxlength="15" pattern="[a-zA-Z a-zA-Z]*" title="solo puedes introducir letras">
+                        <input type="text" name="usuario" class="form-control input-lg" placeholder="Usuario" required autofocus maxlength="15" pattern="[a-zA-Z a-zA-Z]*" title="solo puedes introducir letras">
                     </div>
 
                     <div class="form-group">
                         <div class="form-group">
-                            <input type="password" name="contraseña" class="form-control input-lg" placeholder="contraseña" required autofocus maxlength="16">
+                            <input type="password" name="contra" class="form-control input-lg" placeholder="contraseña" required autofocus maxlength="16">
                         </div>
-
                     </div>
                     <div class="row">
-                        <div class="">
+                        <div class="col-md-12 col-xs-12 col-sm-6">
                             <input type="submit" value="Registrar" class="btn btn-primary  btn-block input-lg">
                         </div>
-
-                        <div class="">
-                            <input type="reset" value="cancelar" class="btn btn-default  btn-block input-lg">
+                        <div class="col-md-12 col-xs-12 col-sm-6">
+                            <input type="submit" value="Volver" class="btn btn-default  btn-block input-lg" name="btnlogin">
                         </div>
                     </div>
                 </form>
-
-                <h4><a href="registro.php">Crear cuenta</a></h4>
+                <h4><a href="../vista/registro.php">Crear cuenta</a></h4>
             </div>
         </div>
     </div>
     <!--Termina formulario Registro-->
-
-
 </body>
 
 </html>
