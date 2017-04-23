@@ -66,14 +66,12 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12 col-xs-12 col-sm-6">
-                            <input type="submit" value="Registrar" class="btn btn-primary  btn-block input-lg">
+                            <input type="submit" value="ingresar" class="btn btn-primary  btn-block input-lg">
                         </div>
-                        <div class="col-md-12 col-xs-12 col-sm-6">
-                            <input type="submit" value="Volver" class="btn btn-default  btn-block input-lg" name="btnlogin">
-                        </div>
+                        
                     </div>
                 </form>
-                <h4><a href="../vista/registro.php">Crear cuenta</a></h4>
+                <h4><a href="../vista/registroUsuario.php">Crear cuenta</a></h4>
             </div>
         </div>
     </div>
