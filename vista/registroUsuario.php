@@ -1,9 +1,4 @@
-<?php
-    SESSION_START();
-    if(!ISSET($_SESSION['usuario'])) {
-        echo '<script> window.location="../index.php"; </script>';
-    }
-?>
+
 
 <!DOCTYPE html>
 
@@ -54,7 +49,7 @@
                 <h3>¡Bienvenid@! Registra tus datos</h3>
                 <form action="../operacion/registrarUsuario.php" method="post">
                     <div class="form-group">
-                        <input type="text" name="usuario" class="form-control input-lg" placeholder="Usuario" required autofocus maxlength="15" pattern="[a-zA-Z a-zA-Z]*" title="solo puedes introducir letras">
+                        <input type="text" name="usuario" id="usuario" class="form-control input-lg" placeholder="Usuario" required autofocus maxlength="15" pattern="[a-zA-Z a-zA-Z]*" title="solo puedes introducir letras">
                     </div>
                     <div class="form-group">
                         <input type="email" name="correo" class="form-control input-lg" placeholder="micorreo@ejemplo.com" required autofocus maxlength="50">
@@ -79,6 +74,8 @@
     <!--Termina formulario Registro-->
 
 <script src="../js/validarRegistro.js"></script>
+
+<script src="../js/validarUsuario.js"></script>
 </body>
 
 </html>
