@@ -1,3 +1,15 @@
+<?php
+    SESSION_START();
+    if(ISSET($_SESSION['usuario'])) {
+        if($_SESSION['tipoUsuario']=="admin"){
+            echo '<script> window.location="vista/indexAdmin.php"; </script>';
+        }else{
+            echo '<script> window.location="vista/indexUser.php"; </script>';
+        }
+    
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 

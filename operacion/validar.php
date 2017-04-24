@@ -11,18 +11,15 @@
 	if (mysql_num_rows($log)>0) {
 		$row = mysql_fetch_array($log);
               $_SESSION["usuario"] = $row['nombUsuario'];
+              $_SESSION["tipoUsuario"] = $row['tipo'];
         
-        if($row['tipo'=="admin"]){
+        if($row['tipo']=="admin"){
             echo '<script> window.location="../vista/indexAdmin.php"; </script>';
-        }else if($row['tipo'=="user"]){
-            
+        }else if($row['tipo']=="user"){
+            echo '<script> window.location="../vista/indexUser.php"; </script>';
         }
 		
-        //echo '<script> alert("hola")</script>';
-                //echo $row['AES_DECRYPT(pass,nombUsuario)'];
-                
-	}
-	else{
+    }else{
 				
 		echo '<script> alert("Usuario no registrado");</script>';
 		echo '<script> window.location="../vista/login.php"; </script>';
