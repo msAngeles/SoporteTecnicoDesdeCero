@@ -34,10 +34,10 @@
                         <li class="active"><a href="../vista/indexAdmin.php">Inicio</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
+                        <li class="dropdown active">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABC Usuarios <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="../vista/registroNewUser.php">Agregar usuario</a></li>
+                                <li class="active"><a href="../vista/registroNewUser.php">Agregar usuario</a></li>
                                 <li><a href="#">Eliminar usuario</a></li>
                                 <li><a href="#">Cambiar usuario</a></li>
 

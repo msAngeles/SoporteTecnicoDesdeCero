@@ -37,16 +37,16 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABC Usuarios <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="../vista/registroNewUser.php">Agregar usuario</a></li>
+                                <li class="active"><a href="../vista/registroNewUser.php">Agregar usuario</a></li>
                                 <li><a href="#">Eliminar usuario</a></li>
                                 <li><a href="#">Cambiar usuario</a></li>
 
                             </ul>
                         </li>
-                        <li class="dropdown">
+                        <li class="dropdown active">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABC Administradores <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="../vista/registroAdmin.php">Agregar administrador</a></li>
+                                <li class="active"><a href="../vista/registroAdmin.php">Agregar administrador</a></li>
                                 <li><a href="#">Eliminar administrador</a></li>
                                 <li><a href="#">Cambiar administrador</a></li>
 
