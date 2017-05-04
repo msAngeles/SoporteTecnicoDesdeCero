@@ -51,10 +51,10 @@
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
                     <a class="navbar-brand" href="#">Soporte Tecnico</a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
@@ -66,8 +66,8 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABC Usuarios <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li class="active"><a href="../vista/registroNewUser.php">Agregar usuario</a></li>
-                                <li><a href="#">Eliminar usuario</a></li>
-                                <li><a href="#">Cambiar usuario</a></li>
+                                <li><a href="../vista/bajaUser.php">Eliminar usuario</a></li>
+                                <li><a href="../vista/modificarUser.php">Cambiar usuario</a></li>
 
                             </ul>
                         </li>
@@ -75,8 +75,8 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABC Administradores <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="../vista/registroAdmin.php">Agregar administrador</a></li>
-                                <li><a href="#">Eliminar administrador</a></li>
-                                <li><a href="#">Cambiar administrador</a></li>
+                                <li><a href="../vista/bajaAdmin.php">Eliminar administrador</a></li>
+                                <li><a href="../vista/modificarAdmin.php">Cambiar administrador</a></li>
 
                             </ul>
                         </li>
