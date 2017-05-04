@@ -15,16 +15,17 @@ $var_inputContra=$_POST['contra'];
 	
 	mysql_query($query);
         mysql_close();    
-        echo '<script> alert("El usuario se ha registrado exitosamente"); </script>';
+        //echo '<script> alert("El usuario se ha registrado exitosamente"); </script>';
     
     
     
-	if($_SESSION['tipoUsuario']=="admin"){
+	/*if($_SESSION['tipoUsuario']=="admin"){
             echo '<script> window.location="vista/indexAdmin.php"; </script>';
-        }else{
+    }else{
             echo '<script> window.location="vista/indexUser.php"; </script>';
-        }
-		
-	mysql_close();
+    }
+	*/	
+	
+
     
 ?>

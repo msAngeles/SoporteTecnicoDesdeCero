@@ -5,23 +5,25 @@ function validarUsuario(){
     <?php 
     include('conexion.php');
     $cont=0;
-    $res=mysql_query("select * from usuario");
+    $res=mysql_query("select * from usuario where nombUsuario='miriam'");
    
        while($row=mysql_fetch_array($res)){
            if($row['nombUsuario']==usuario){
                $cont=1;
+           }else{
+               $cont=0;
            }
        }        
     
     ?>
-        tmp="<?php echo($cont);>?";
+        tmp="<?php echo($cont);?>";
     
   if(tmp==1) {
-    usuario.setCustomValidity("Las contraseñas no coinciden");
+    alert("el usuario ya existe");
   } else {
     
   }
 }
 
-usuario.onchange = validarUsuario;
+validarUsuario;
 

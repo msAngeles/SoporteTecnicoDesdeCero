@@ -15,7 +15,7 @@ $var_inputRecontra=$_POST['recontra'];
 
 	mysql_query($query);
 	
-	echo '<script> window.location="../vista/indexAdmin.php"; </script>';
+	//echo '<script> window.location="../vista/indexAdmin.php"; </script>';
 	
 	mysql_close();
 		
