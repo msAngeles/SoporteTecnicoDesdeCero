@@ -13,10 +13,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/bootstrap.min.css">
+        
         <script src="../js/jquery.min.js"></script>
         <script src="../js/bootstrap.min.js"></script>
 
-        <script language="javascript">
+        <!-- <script language="javascript">
             $(document).ready(function() {
                 $().ajaxStart(function() {
                     $('#loading').show();
@@ -40,7 +41,13 @@
                 });
             })
 
-        </script>
+        </script>-->
+
+       <?php
+        include('../js/mensajes.js');
+        ?>
+        
+        
         <style>
             /* Remove the navbar's default margin-bottom and rounded borders */
             
@@ -73,91 +80,45 @@
     </head>
 
     <body>
-        <!--Inicia Menu-->
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-                    <a class="navbar-brand" href="#">Soporte Tecnico</a>
+        <?php
+        include('menuAdmin.php');
+        //include('menuAdmin2.php');
+        ?>
+
+
+
+            <!--      <div class="col-sm-2 col-md-2 col-sm-offset-8 sidebar-offcanvas" id="sidebar">
+            <div class="panel panel-primary">
+                
+                <div class="panel-heading" style="font-size:20px;">Avisos</div>
+                <div class="panel-body">
+                    <p>...</p>
                 </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.php">Inicio</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABC Usuarios <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="../vista/registroNewUser.php">Agregar usuario</a></li>
-                                <li><a href="../vista/bajaUser.php">Eliminar usuario</a></li>
-                                <li><a href="../vista/modificarUser.php">Cambiar usuario</a></li>
 
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABC Administradores <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="../vista/registroAdmin.php">Agregar administrador</a></li>
-                                <li><a href="../vista/bajaAdmin.php">Eliminar administrador</a></li>
-                                <li><a href="../vista/modificarAdmin.php">Cambiar administrador</a></li>
-
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <?php
-                         echo $_SESSION['usuario'];   
-                        ?>
-                                    <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Mi cuenta</a></li>
-                                <li><a href="../operacion/logout.php">Salir</a></li>
-
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+               
+                <table class="table">
+                    ...
+                </table>
             </div>
-        </nav>
-        <!--Termina Menu-->
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img src="../img/img1.jpg" alt="Image">
-                    <div class="carousel-caption">
-
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="../img/img4.jpg" alt="Image">
-                    <div class="carousel-caption">
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
+      -->
+            <!--
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3 col-md-2 sidebar">
+                    <ul class="nav nav-sidebar">
+                        <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">Reports</a></li>
+                        <li><a href="#">Analytics</a></li>
+                        <li><a href="#">Export</a></li>
+                    </ul>
+
+
+                </div>
+
+            </div>
+        </div>-->
+            <!-- termina menu de servicios -->
 
 
     </body>

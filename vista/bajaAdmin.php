@@ -15,69 +15,26 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/bootstrap.min.css">
+        
         <script src="../js/jquery.min.js"></script>
         <script src="../js/bootstrap.min.js"></script>
+        <?php
+        include('../js/mensajes.js');
+        ?>
 
     </head>
 
     <body>
-       <!--Inicia Menu-->
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>                        
-                    </button>
-                    <a class="navbar-brand" href="#">Soporte Tecnico</a>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="../vista/indexAdmin.php">Inicio</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABC Usuarios <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li class="active"><a href="../vista/registroNewUser.php">Agregar usuario</a></li>
-                                <li><a href="../vista/bajaUser.php">Eliminar usuario</a></li>
-                                <li><a href="../vista/modificarUser.php">Cambiar usuario</a></li>
-
-                            </ul>
-                        </li>
-                        <li class="dropdown active">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABC Administradores <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="../vista/registroAdmin.php">Agregar administrador</a></li>
-                                <li class="active"><a href="../vista/bajaAdmin.php">Eliminar administrador</a></li>
-                                <li><a href="../vista/modificarAdmin.php">Cambiar administrador</a></li>
-
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <?php
-                         echo $_SESSION['usuario'];   
-                        ?>
-                                    <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Mi cuenta</a></li>
-                                <li><a href="../operacion/logout.php">Salir</a></li>
-
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!--Termina Menu-->
-
-
-
-        <!--Inicia datos-->
-
         <?php
+        include('menuAdmin.php');
+        //include('menuAdmin2.php');
+        ?>
+
+
+
+            <!--Inicia datos-->
+
+            <?php
 
             include("../operacion/conexion.php");
             $query="select * from usuario where tipo='admin'";
@@ -85,40 +42,40 @@
             $fila=mysql_query($query);
 	
         ?>
-            <div class="container-fluid">
-                <h3>Eliminar administradores</h3>
-                <table class='table'>
-                    <tr>
-                        <td>usuario</td>
-                        <td>nombre</td>
-                        <td>opcion</td>
-                    </tr>
-                    <tr>
-                        <?php
+                <div class="container-fluid">
+                    <h3>Eliminar administradores</h3>
+                    <table class='table'>
+                        <tr>
+                            <td>usuario</td>
+                            <td>nombre</td>
+                            <td>opcion</td>
+                        </tr>
+                        <tr>
+                            <?php
             while($fila_recorre=mysql_fetch_array($fila)) { 
                 if($fila_recorre['nombUsuario']!=$_SESSION['usuario']){
                 ?>
 
-                            <td>
-                                <?php echo $fila_recorre['nombUsuario'];?>
-                            </td>
-                            <td>
-                                <?php echo $fila_recorre['email']; ?>
-                            </td>
+                                <td>
+                                    <?php echo $fila_recorre['nombUsuario'];?>
+                                </td>
+                                <td>
+                                    <?php echo $fila_recorre['email']; ?>
+                                </td>
 
-                            <td>
-                                <a id="fo3" class="myButton" title="Eliminar toda esta línea" href="../operacion/eliminarUser.php?id=<?php echo $fila_recorre['idUsuario']?>">Eliminar</a>
-                            </td>
+                                <td>
+                                    <a id="fo3" class="myButton" title="Eliminar toda esta línea" href="../operacion/eliminarUser.php?id=<?php echo $fila_recorre['idUsuario']?>">Eliminar</a>
+                                </td>
 
 
-                            <?php
+                                <?php
                 }
         } 
         ?>
-                    </tr>
-                </table>
-            </div>
-            <!--Termina datos-->
+                        </tr>
+                    </table>
+                </div>
+                <!--Termina datos-->
 
 
     </body>

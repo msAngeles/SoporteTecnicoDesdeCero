@@ -15,69 +15,39 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/bootstrap.min.css">
+        
         <script src="../js/jquery.min.js"></script>
         <script src="../js/bootstrap.min.js"></script>
+        <script language="javascript">
+            function recargar() {
+                $("#recargado").fadeOut(function() {
+                    $.post("../recargarDivsContmpo/miscript.php", {}, function(data) {
+                        $("#recargado").html(data).fadeIn();
+                    });
+                });
+            }
+
+            timer = setInterval("recargar()", 0);
+
+        </script>
+        <?php
+        include('../js/mensajes.js');
+        ?>
 
     </head>
 
     <body>
-        <!--Inicia Menu-->
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>                        
-                    </button>
-                    <a class="navbar-brand" href="#">Soporte Tecnico</a>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="../vista/indexAdmin.php">Inicio</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown active">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABC Usuarios <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li ><a href="../vista/registroNewUser.php">Agregar usuario</a></li>
-                                <li class="active"><a href="../vista/bajaUser.php">Eliminar usuario</a></li>
-                                <li ><a href="../vista/modificarUser.php">Cambiar usuario</a></li>
-
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABC Administradores <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="../vista/registroAdmin.php">Agregar administrador</a></li>
-                                <li><a href="../vista/bajaAdmin.php">Eliminar administrador</a></li>
-                                <li><a href="../vista/modificarAdmin.php">Cambiar administrador</a></li>
-
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <?php
-                         echo $_SESSION['usuario'];   
-                        ?>
-                                    <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Mi cuenta</a></li>
-                                <li><a href="../operacion/logout.php">Salir</a></li>
-
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!--Termina Menu-->
-
-
-
-        <!--Inicia datos-->
-
         <?php
+        include('menuAdmin.php');
+        //include('menuAdmin2.php');
+        ?>
+
+
+
+
+            <!--Inicia datos-->
+
+            <?php
 
             include("../operacion/conexion.php");
             $query="select * from usuario where tipo='user'";
@@ -85,40 +55,40 @@
             $fila=mysql_query($query);
 	
         ?>
-            <div class="container-fluid">
-                <h3>Eliminar usuarios</h3>
+                <div class="container-fluid">
+                    <h3>Eliminar usuarios</h3>
 
-                <table class='table'>
-                    <tr>
-                        <td>usuario</td>
-                        <td>nombre</td>
-                        <td>Dar de baja</td>
-                    </tr>
-
-                    <?php
-            while($fila_recorre=mysql_fetch_array($fila)) { 
-                ?>
+                    <table class='table'>
                         <tr>
-                            <td>
-                                <?php echo $fila_recorre['nombUsuario'];?>
-                            </td>
-                            <td>
-                                <?php echo $fila_recorre['email']; ?>
-                            </td>
-
-                            <td>
-                                <a id="fo3" class="myButton" title="Eliminar toda esta línea" href="../operacion/eliminarUser.php?id=<?php echo $fila_recorre['idUsuario']?>">Eliminar</a>
-                            </td>
+                            <td>usuario</td>
+                            <td>nombre</td>
+                            <td>Dar de baja</td>
                         </tr>
 
                         <?php
+            while($fila_recorre=mysql_fetch_array($fila)) { 
+                ?>
+                            <tr>
+                                <td>
+                                    <?php echo $fila_recorre['nombUsuario'];?>
+                                </td>
+                                <td>
+                                    <?php echo $fila_recorre['email']; ?>
+                                </td>
+
+                                <td>
+                                    <a id="fo3" class="myButton" title="Eliminar toda esta línea" href="../operacion/eliminarUser.php?id=<?php echo $fila_recorre['idUsuario']?>">Eliminar</a>
+                                </td>
+                            </tr>
+
+                            <?php
         } 
         ?>
-                </table>
+                    </table>
 
 
-            </div>
-            <!--Termina datos-->
+                </div>
+                <!--Termina datos-->
 
 
     </body>
